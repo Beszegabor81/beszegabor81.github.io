@@ -1,30 +1,347 @@
-body {
-    font-family: Verdana, sans-serif;
-    text-align: center;
-    background-color: black;
-    color: white;
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: #4a4a4a;
 }
 
-.cta {
-    color: Aquamarine;
-    font-size: 16px;
+/* Font faces */
+
+@font-face {
+    font-family: "Avenir_Regular";
+    src: url("../fonts/AvenirNextLTPro-Regular.otf")
+}
+
+@font-face {
+    font-family: "Avenir_Medium";
+    src: url("../fonts/AvenirNextLTPro-Medium.otf")
+}
+
+@font-face {
+    font-family: "Avenir_Demi";
+    src: url("../fonts/AvenirNextLTPro-Demi.otf")
+}
+
+@font-face {
+    font-family: "Avenir_Bold";
+    src: url("../fonts/AvenirNextLTPro-Bold.otf")
+}
+
+/* Utility classes */
+
+.u_bold { font-weight: bold;}
+.u_blightgrey { background-color: #d8d8d8; }
+.u_grey { color: #9b9b9b; }
+.u_center { text-align: center; }
+.u_icon { height: 32px; }
+.u_w60 { width: 60%; box-sizing: border-box; }
+.u_w100 { width: 100%; box-sizing: border-box; }
+.u_p_32_24 { padding: 32px 24px; }
+.u_column { flex-direction: column; }
+.u_flex { display: flex; }
+.u_flex_center {
+    display: flex;
+    align-items: center;
+}
+.u_text_link { color: #4a90e2; }
+.u_note {
+    font-family: Arial;
+    font-size: 12px;
+}
+.u_text_center { text-align: center; }
+
+/* Specific classes */
+
+.u_icon {
+    height: 32px;
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: normal;
+    font-family: "Avenir_Bold";
+    font-size: 36px;
+    padding-bottom: 24px;
 }
 
-h2 {
-    font-size: 42px;
-    font-weight: 300;
+h4 {
+    font-family: "Avenir_Demi";
+    font-size: 22px;
+    padding-bottom: 24px;
 }
 
 p {
-    color: Gray;
-    font-size: 21px;
+    font-family: "Avenir_Regular";
+    padding-bottom: 8px;
 }
 
-.footer {
-    text-align: right;
-} 
+.content {
+    padding-top: 64px;
+}
+
+/* Navigation bar */
+
+.navbarheader {
+    z-index: 1000;
+    height: 64px;
+    background-color: white;
+    position: fixed;
+    justify-content: space-between;
+}
+
+.ca_logo a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+.navbar a {
+    font-family: "Avenir_Regular";
+}
+
+.ca_logo {
+    padding-left: 24px;
+}
+
+.navbar a:hover {
+    color: #9b9b9b;
+}
+
+/* Banner */
+
+.btn:hover{
+    background-color: #7c7c7c;
+}
+
+.btn {
+    justify-content: center;
+}
+
+.btn p {
+    padding: 8px;
+    color: white;
+}
+
+/* Informations */
+
+.information_main_image {
+    padding-bottom: 32px;
+}
+
+.informations_main_container .u_note{
+    padding: 0;
+    margin-top: 24px;
+}
+
+.information_card {
+    padding: 16px;
+}
+
+.information_card img {
+    width: 35%;
+}
+
+.information_card_text {
+
+    margin-left: 24px;
+}
+
+.information_card_text h4 {
+    padding-bottom: 8px;
+}
+
+.information_card:hover {
+    background-color: #eaebec;
+}
+
+/* Start learning */
+
+.startlearning {
+    padding: 32px 16px;
+}
+
+.startlearning h1{
+    padding-bottom: 16px;
+}
+
+.startlearning_cards_container {
+    flex-wrap: wrap;
+}
+
+.startlearning_card {
+    margin-bottom: 8px;
+}
+
+.startlearning_card a:hover {
+    background-color: #eaebec;
+}
+
+.startlearning_card_text h4{
+    padding: 0;
+}
+
+.startlearning_card_text {
+    padding: 16px;
+}
+
+/* Thesis exhibit */
+
+.thesisexhibit h1 {
+    padding-bottom: 16px;
+}
+
+.thesisexhibit video{
+    margin-bottom: 24px;
+}
+
+/* Footer */
+
+.footer_container {
+    justify-content: space-between;
+    margin: 16px 24px;
+}
+
+.footer_container p {
+    padding: 0;
+}
+    /* Ez már nem is lényeges.. */
+.footer_container a {
+    padding-left: 16px;
+}
+
+/* Media Querry */
+
+/* Mert néhány sor furán tört ebben a tartományban */
+
+@media screen and (max-width: 980px) {
+    h1 {
+        font-size: 26px;
+    }
+    .title_h1{
+        font-size: 36px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+}
+
+/* Media Querry - Mobile*/
+
+@media screen and (max-width: 768px) {
+    .u_mobile_hidden{
+        display: none;
+    }
+    nav {
+        width: 100%;
+    }
+    ul {
+        justify-content: space-around;
+    }    
+    h1 {
+        font-size: 36px;
+    }
+    .banner_text {
+        padding: 32px 16px;
+    }
+    .banner_text h1 {
+        padding-bottom: 32px;
+    }
+    h4 {
+        font-size: 20px;
+        padding-bottom: 24px;
+    }
+    .btn {
+        width: 100%;
+        background-color: #9b9b9b;
+    }
+    .information_cards_container {
+        width: 100%;
+        margin-top: 0;
+    }
+    .information_card {
+        flex-direction: column;
+    }
+    .information_card img{
+        width: 100%;
+    }
+    .information_card_text {
+        margin-top: 24px;
+        margin-left: 16px;
+    }
+    .startlearning_card h4{
+        padding-bottom: 16; /*A mockupon mindenhol 16px szerepel, alul pedig 24. Ez nekem fura. A 0-val mindenhol 16 lesz a padding, ha a mockuphoz szeretnék igazodni, akkor ide 8at kellene írni*/
+    }
+    .thesisexhibit_main_container{
+        width: 100%;
+    }
+}
+
+/* Media Querry - Desktop*/
+
+@media screen and (min-width: 768px) {
+    .u_desktop_hidden{
+        display: none;
+    }
+    li {
+        padding-left: 16px;
+    }
+    .navbar {
+        padding: 0 24px;
+    }
+    .btn {
+        max-width: 300px;
+        background-color: #4a4a4a;
+    }
+    .btn:hover{
+        background-color: #7c7c7c;
+    }
+    .information_cards_container {
+        width: 40%;
+        margin-top: 16px;
+    }
+    .information_card {
+        align-items: center;
+    }
+    .startlearning {
+        background-color: #eaebec;
+    }
+    .startlearning{
+        padding: 32px 56px;
+    }
+    .startlearning h1{
+        padding-bottom: 16px;
+    }
+    .startlearning_card_text h4{
+        padding-bottom: 8px;
+    }
+    .startlearning_card {
+        padding: 16px;
+        flex: 0 33.33%;
+        margin-bottom: 0px;
+    }
+    .startlearning_card a {
+        flex: 1 0 auto;
+        background-color: white;
+    }
+    .startlearning_card a:hover {
+        background-color: #d8d8d8;
+    }
+    .startlearning_card_text {
+        padding: 16px;
+    }
+    .thesisexhibit {
+        padding: 32px 0;
+    }
+    .thesisexhibit h1 {
+        padding-bottom: 16px;
+    }
+    .thesisexhibit_main_container{
+        padding: 16px 24px 24px 24px;
+    }
+    .thesisexhibit_main_container h1 {
+        padding-bottom: 16px;
+    }
+    .thesisexhibit_cards_container {
+        width: 40%;
+    }
+}  
