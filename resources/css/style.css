@@ -202,6 +202,9 @@ p {
 
 @media screen and (max-width: 980px) {
 
+    /*Ez nem volt feladat, de szerintem így mobilon jobban olvasható*/
+    *{ font-size: 32px; }
+
     /* Media Querry - Mobile - Utility classes */
 
     .u_mobile_hidden{ display: none; }
